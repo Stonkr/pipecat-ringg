@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pipecat-ringg"
+version = "0.1.0"
+description = "Ringg AI Speech-to-Text integration for the Pipecat framework"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "Ringg AI", email = "dhairya.joshi@ringg.ai" }]
+maintainers = [{ name = "Ringg AI", email = "dhairya.joshi@ringg.ai" }]
+keywords = ["pipecat", "ringg", "speech-to-text", "stt", "voice-ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "pipecat-ai[websockets-base]>=1.1.0",
+    "ringglabs>=0.1.0,<1",
+    "loguru>=0.7.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+# Dependencies needed to run the foundational example (example.py).
+example = [
+    "python-dotenv>=1.0.0",
+    "pipecat-ai[silero,daily,webrtc,websocket,runner]>=1.0.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6.0",
+]
+
+[project.urls]
+Homepage = "https://ringg.ai"
+Repository = "https://github.com/Stonkr/pipecat-ringg"
+Issues = "https://github.com/Stonkr/pipecat-ringg/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pipecat_ringg"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -47,7 +47,7 @@ pip install -e ".[dev,example]"
 
 ## Prerequisites
 
-- Python 3.10 or higher
+- Python 3.11 or higher
 - A Ringg AI API key — get one at [ringg.ai](https://ringg.ai)
 
 ## Usage
@@ -141,7 +141,7 @@ RinggSTTService(
 ## Compatibility
 
 - **Pipecat version:** Tested with **Pipecat v1.2.1**.
-- **Python version:** 3.10+
+- **Python version:** 3.11+
 - **Dependencies:**
   - `pipecat-ai[websockets-base] >= 1.0.0`
   - `ringglabs >= 0.1.0, < 1`

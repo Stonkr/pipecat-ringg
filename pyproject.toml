@@ -7,7 +7,7 @@ name = "pipecat-ringg"
 version = "0.1.0"
 description = "Ringg AI Speech-to-Text integration for the Pipecat framework"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "BSD-2-Clause"
 license-files = ["LICENSE"]
 authors = [{ name = "Ringg AI", email = "dhairya.joshi@ringg.ai" }]
@@ -17,7 +17,6 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Multimedia :: Sound/Audio :: Speech",
@@ -51,7 +50,7 @@ packages = ["src/pipecat_ringg"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py311"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
